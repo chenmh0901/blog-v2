@@ -4,7 +4,7 @@ definePageMeta({
 })
 </script>
 <template>
-  <div>post</div>
+  <PostList />
 </template>
 
 <style scoped lang="scss"></style>

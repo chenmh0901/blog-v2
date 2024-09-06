@@ -10,6 +10,7 @@
     "postinstall": "nuxt prepare"
   },
   "dependencies": {
+    "@directus/sdk": "^17.0.1",
     "nuxt": "^3.13.0",
     "vue": "latest",
     "vue-router": "latest"
@@ -17,7 +18,7 @@
   "devDependencies": {
     "@nuxtjs/tailwindcss": "^6.12.1",
     "@tailwindcss/typography": "^0.5.13",
-    "sass": "^1.77.8",
-    "prettier": "^3.3.3"
+    "prettier": "^3.3.3",
+    "sass": "^1.77.8"
   }
 }
