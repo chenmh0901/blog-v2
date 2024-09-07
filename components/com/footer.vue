@@ -2,8 +2,8 @@
 <template>
   <div class="footer">
     <div class="footer_logo">
-      <NuxtLink to="https://github.com/chenmh0901/blog-v2"
-        >AmumuBlog V2</NuxtLink
+      <NuxtLink to="https://github.com/Nesb01t/meteor-v2"
+        >MeteorTemplate V2</NuxtLink
       >
       <NuxtLink to="https://nuxt.com/">Powered by Nuxt.js</NuxtLink>
     </div>
