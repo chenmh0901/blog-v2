@@ -4,6 +4,7 @@ import Hero from '../com/hero.vue'
 import Card from './card.vue'
 import { readItems } from '@directus/sdk'
 import { formateDate } from '~/utils/time'
+import TagFilter from './tag-filter.vue'
 
 const posts = ref()
 const fetchingPosts = ref(true)
@@ -34,6 +35,9 @@ onMounted(async () => {
       共 {{ posts.length }} 份笔记，上次更新于
       {{ formateDate(posts[0].date_updated) }}
     </span>
+
+    <TagFilter class="my-6" />
+
     <ul class="post-list_content">
       <Card v-for="post in posts" :post="post" :key="post.id" />
     </ul>
