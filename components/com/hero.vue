@@ -17,7 +17,7 @@ defineProps<{
 
 <style scoped lang="scss">
 .hero {
-  @apply pb-2;
+  @apply pb-5;
   @apply flex flex-col;
 
   h1 {

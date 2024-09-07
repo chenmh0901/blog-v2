@@ -11,6 +11,7 @@
   },
   "dependencies": {
     "@directus/sdk": "^17.0.1",
+    "dayjs": "^1.11.13",
     "nuxt": "^3.13.0",
     "vue": "latest",
     "vue-router": "latest"

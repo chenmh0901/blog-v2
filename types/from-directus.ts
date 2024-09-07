@@ -6,8 +6,8 @@ export interface Post {
   tag: string
 
   cover?: string
-  created_at: string
-  updated_at: string
+  date_updated: string
+  date_created: string
 }
 
 export interface Book {
@@ -19,8 +19,8 @@ export interface Book {
   date: string
 
   cover?: string
-  created_at: string
-  updated_at: string
+  date_updated: string
+  date_created: string
 }
 
 export interface Project {
@@ -32,6 +32,6 @@ export interface Project {
   status: string
 
   cover?: string
-  created_at: string
-  updated_at: string
+  date_updated: string
+  date_created: string
 }
