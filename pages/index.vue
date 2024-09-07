@@ -4,7 +4,9 @@ definePageMeta({
 })
 </script>
 <template>
-  <div class="w-full bg-slate-100">home</div>
+  <div class="w-full">
+    <PostList />
+  </div>
 </template>
 
 <style scoped lang="scss"></style>

@@ -6,7 +6,6 @@
     </div>
     <div class="header_nav">
       <NuxtLink to="/">Home</NuxtLink>
-      <NuxtLink to="/post">Post</NuxtLink>
       <NuxtLink to="/book">Books</NuxtLink>
       <NuxtLink to="/about">About</NuxtLink>
     </div>

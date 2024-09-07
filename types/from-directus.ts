@@ -1,7 +1,7 @@
 export interface Post {
   id: number
   title: string
-  subtitle: string
+  sub_title: string
   content: string
   tag: string
 
