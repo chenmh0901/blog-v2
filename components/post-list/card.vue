@@ -34,7 +34,7 @@ const imgLoading = ref(true)
 
 <style scoped lang="scss">
 .post-card {
-  @apply w-1/3 relative;
+  @apply w-full relative;
   @apply border rounded-lg shadow-sm;
 
   @apply hover:scale-[101%] hover:shadow-md transition-all duration-150;

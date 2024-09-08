@@ -52,7 +52,8 @@ onMounted(async () => {
     @apply p-4;
   }
   &_content {
-    @apply flex flex-wrap gap-5;
+    @apply gap-5 pb-48;
+    @apply grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3;
   }
 }
 </style>
