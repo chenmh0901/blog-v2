@@ -20,6 +20,18 @@ onMounted(async () => {
   posts.value = await readPosts()
   fetchingPosts.value = false
 })
+
+// filter
+const activiedTag = ref<string>()
+const filtedPosts = computed(() => {
+  if (!activiedTag.value) return posts.value
+
+  return posts.value.filter((post: Post) => {
+    if (activiedTag.value) {
+      return post.tag === activiedTag.value
+    }
+  })
+})
 </script>
 <template>
   <div class="post-list">
@@ -36,10 +48,10 @@ onMounted(async () => {
       {{ formateDate(posts[0].date_updated) }}
     </span>
 
-    <TagFilter class="my-6" />
+    <TagFilter class="my-6" v-model="activiedTag" />
 
     <ul class="post-list_content">
-      <Card v-for="post in posts" :post="post" :key="post.id" />
+      <Card v-for="post in filtedPosts" :post="post" :key="post.id" />
     </ul>
   </div>
 </template>

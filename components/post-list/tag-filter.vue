@@ -1,5 +1,5 @@
 <script setup lang="ts">
-const activedTag = ref()
+const activedTag = defineModel<string>()
 </script>
 <template>
   <div class="tag-filter">
