@@ -9,8 +9,8 @@ export const dirStaticConfig = {
     'Interview',
     'Lifelong'
   ],
-  bookColletion: 'Blog_Book',
-  bookTag: [
+  bookColletion: 'Blog_book',
+  bookTypes: [
     '文学',
     '科技',
     '历史',
@@ -19,7 +19,7 @@ export const dirStaticConfig = {
     '金融',
     '心理',
   ],
-  projectCollection: 'Blog_Project',
+  projectCollection: 'Blog_project',
   api_url: 'https://api.niniix.cn',
 }
 

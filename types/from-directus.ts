@@ -12,13 +12,14 @@ export interface Post {
 
 export interface Book {
   id: number
-  name: string
-  author: string
-  content: string
-  tag: string
-  date: string
+  book_name: string
+  book_author: string
+  book_content: string
+  book_type: string
+  book_date: string
+  status: string
+  remark: string
 
-  cover?: string
   date_updated: string
   date_created: string
 }

@@ -1,5 +1,8 @@
 <script setup lang="ts">
 const activedTag = defineModel<string>()
+defineProps<{
+  TagList: string[]
+}>()
 </script>
 <template>
   <div class="tag-filter">
@@ -12,7 +15,7 @@ const activedTag = defineModel<string>()
     </div>
     <div class="divider" />
     <div
-      v-for="tag in dirStaticConfig.postTags"
+      v-for="tag in TagList"
       class="post-tag"
       :class="activedTag === tag ? 'selected' : ''"
       @click="activedTag = activedTag === tag ? '' : tag"

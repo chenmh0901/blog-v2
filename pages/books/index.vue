@@ -4,7 +4,9 @@ definePageMeta({
 })
 </script>
 <template>
-  <div>book</div>
+  <div class="w-full">
+    <BookList />
+  </div>
 </template>
 
 <style scoped lang="scss"></style>

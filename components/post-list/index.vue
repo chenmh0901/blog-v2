@@ -4,7 +4,7 @@ import Hero from '../com/hero.vue'
 import Card from './card.vue'
 import { readItems } from '@directus/sdk'
 import { formateDate } from '~/utils/time'
-import TagFilter from './tag-filter.vue'
+import TagFilter from '../com/tag-filter.vue'
 
 const posts = ref()
 const fetchingPosts = ref(true)
@@ -48,7 +48,11 @@ const filtedPosts = computed(() => {
       {{ formateDate(posts[0].date_updated) }}
     </span>
 
-    <TagFilter class="my-6" v-model="activiedTag" />
+    <TagFilter
+      class="my-6"
+      v-model="activiedTag"
+      :-tag-list="dirStaticConfig.postTags"
+    />
 
     <ul class="post-list_content">
       <Card v-for="post in filtedPosts" :post="post" :key="post.id" />
