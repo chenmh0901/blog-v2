@@ -5,7 +5,7 @@ defineProps<{
 }>()
 </script>
 <template>
-  <div class="tag-filter">
+  <ul class="tag-filter">
     <div
       class="post-tag"
       @click="activedTag = ''"
@@ -22,7 +22,7 @@ defineProps<{
     >
       {{ tag }}
     </div>
-  </div>
+  </ul>
 </template>
 
 <style scoped lang="scss">

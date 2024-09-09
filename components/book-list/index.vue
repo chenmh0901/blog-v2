@@ -13,14 +13,13 @@ const readBooks = async () => {
   const data = client.request<Book>(
     readItems(dirStaticConfig.bookColletion, { sort: '-date_updated' }),
   )
+
   return data
 }
 
 onMounted(async () => {
   books.value = await readBooks()
   fetchingBooks.value = false
-
-  console.log(books.value)
 })
 
 // filter
