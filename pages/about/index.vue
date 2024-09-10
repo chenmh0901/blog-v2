@@ -10,7 +10,7 @@ definePageMeta({
   <div>
     <Hero
       title="Projects"
-      :descpition="`Here is amumu ，从大学开始接触 code ，前端开发实习生，目前大四在读`"
+      :descpition="`Here is amumu ，我从大学开始接触 code ，前端开发实习生，目前大四在读`"
     />
 
     <TechStack />
