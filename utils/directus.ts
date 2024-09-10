@@ -7,7 +7,8 @@ export const dirStaticConfig = {
     'Algorithms',
     'Other',
     'Interview',
-    'Lifelong'
+    'Lifelong',
+    'CS'
   ],
   bookColletion: 'Blog_book',
   bookTypes: [

@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import type { Post } from '~/types/from-directus'
-
+import { getTagColor } from '~/utils/icon-mapping'
 defineProps<{
   post: Post
 }>()
@@ -22,7 +22,10 @@ const imgLoading = ref(true)
         <Icon name="eos-icons:loading" />Loading...
       </div>
     </div>
-    <div class="post-card_tag">
+    <div
+      class="post-card_tag"
+      :style="{ backgroundColor: getTagColor(post.tag) }"
+    >
       <span>{{ post.tag }}</span>
     </div>
     <div class="post-card_desc">

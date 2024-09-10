@@ -1,8 +1,11 @@
 <script setup lang="ts">
-const activedTag = defineModel<string>()
+import { getIconFillColor, getIconName } from '~/utils/icon-mapping'
+
 defineProps<{
   TagList: string[]
 }>()
+
+const activedTag = defineModel<string>()
 </script>
 <template>
   <ul class="tag-filter">
@@ -20,6 +23,12 @@ defineProps<{
       :class="activedTag === tag ? 'selected' : ''"
       @click="activedTag = activedTag === tag ? '' : tag"
     >
+      <Icon
+        v-if="tag && activedTag !== tag"
+        :name="getIconName(tag)"
+        class="drop-shadow-sm"
+        :style="{ color: getIconFillColor(tag) }"
+      />
       {{ tag }}
     </div>
   </ul>
@@ -31,11 +40,13 @@ defineProps<{
 }
 
 .post-tag {
-  @apply text-xs text-gray-600;
+  @apply text-xs text-gray-600 transition-all duration-300;
   @apply rounded-full shadow-md px-[10px] py-[3px];
   @apply inline-block cursor-pointer;
   @apply bg-opacity-50 bg-purple-50;
+  @apply flex items-center gap-2;
 }
+
 .divider {
   @apply w-[1px] h-[16px];
   @apply bg-gray-300;
