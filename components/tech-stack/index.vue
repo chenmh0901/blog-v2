@@ -52,15 +52,17 @@ const techStack = [
 
 <style scoped lang="scss">
 .tech-stack {
-  @apply px-6 py-4 border shadow rounded-lg;
+  @apply p-4 pt-2 border shadow rounded-lg dark:border-none;
+  @apply w-full;
 
   &_title {
-    @apply my-3 text-xl font-semibold;
+    @apply my-3 text-xl font-semibold dark:text-gray-300;
   }
 }
 
 .block {
-  @apply flex gap-6;
+  @apply flex gap-6 flex-wrap;
+  @apply dark:text-gray-300;
 
   &_tech {
     @apply flex flex-col items-center;

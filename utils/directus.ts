@@ -5,10 +5,10 @@ export const dirStaticConfig = {
   postTags: [
     'Frontend',
     'Algorithms',
-    'Other',
     'Interview',
+    'CS',
     'Lifelong',
-    'CS'
+    'Other',
   ],
   bookColletion: 'Blog_book',
   bookTypes: [
@@ -21,11 +21,13 @@ export const dirStaticConfig = {
     '心理',
   ],
   projectCollection: 'Blog_project',
+  dailyTodoCollection: 'Blog_dailyTodo',
+  bookTodoCollection: 'Blog_bookTodo',
   api_url: 'https://api.niniix.cn',
 }
 
-export const dirAssetsSrc = (src: string) => {
-  return `${dirStaticConfig.api_url}/assets/${src}`
+export const dirAssetsSrc = (src: string, width: number = 800, quality: number = 75) => {
+  return `${dirStaticConfig.api_url}/assets/${src}?format=webp&width=${width}&quality=${quality}`
 }
 
 export const client = createDirectus(dirStaticConfig.api_url).with(rest())

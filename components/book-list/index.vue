@@ -5,6 +5,7 @@ import { readItems } from '@directus/sdk'
 import { formateDate } from '~/utils/time'
 import TagFilter from '../com/tag-filter.vue'
 import BookTable from './book-table.vue'
+import Todo from '../com/todo.vue'
 
 const books = ref()
 const fetchingBooks = ref(true)
@@ -40,6 +41,14 @@ const filtedBooks = computed(() => {
       title="Books"
       :descpition="`一些阅读过的书籍记录，包括文学、心理、技术等多个领域`"
     />
+
+    <div class="todo-box">
+      <Todo
+        :title="`Book Todo`"
+        :-todo-collection="dirStaticConfig.bookTodoCollection"
+      />
+    </div>
+
     <div
       v-if="fetchingBooks"
       class="opacity-80 text-sm flex gap-2 items-center"
@@ -64,6 +73,7 @@ const filtedBooks = computed(() => {
 <style scoped lang="scss">
 .book-list {
   @apply p-4;
+  @apply relative;
 
   &_desc {
     @apply p-4;
@@ -71,5 +81,10 @@ const filtedBooks = computed(() => {
   &_content {
     @apply gap-5 pb-48;
   }
+}
+
+.todo-box {
+  @apply block mb-2;
+  @apply md:block md:top-2 md:right-8 md:absolute;
 }
 </style>

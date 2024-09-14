@@ -5,6 +5,7 @@ import Card from './card.vue'
 import { readItems } from '@directus/sdk'
 import { formateDate } from '~/utils/time'
 import TagFilter from '../com/tag-filter.vue'
+import Todo from '../com/todo.vue'
 
 const posts = ref()
 const fetchingPosts = ref(true)
@@ -36,6 +37,12 @@ const filtedPosts = computed(() => {
 <template>
   <div class="post-list">
     <Hero title="Post" :descpition="`一些日常博客、学习笔记、面经和随记`" />
+    <div class="todo-box">
+      <Todo
+        :title="`Daily Todo`"
+        :-todo-collection="dirStaticConfig.dailyTodoCollection"
+      />
+    </div>
 
     <div
       v-if="fetchingPosts"
@@ -63,13 +70,37 @@ const filtedPosts = computed(() => {
 <style scoped lang="scss">
 .post-list {
   @apply p-4;
+  @apply relative;
+
+  &_header {
+    @apply flex;
+  }
 
   &_desc {
     @apply p-4;
   }
+
   &_content {
     @apply gap-5 pb-48;
     @apply grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3;
   }
+}
+
+.todo-box {
+  @apply block mb-2;
+  @apply md:block md:top-2 md:right-8 md:absolute;
+}
+
+.fade-in-enter-active,
+.fade-in-leave-active {
+  @apply transition-all duration-500;
+  opacity: 1;
+}
+
+.fade-in-enter-from,
+.fade-in-leave-to {
+  @apply transition-all duration-500;
+  opacity: 0;
+  transform: translateY(70px);
 }
 </style>

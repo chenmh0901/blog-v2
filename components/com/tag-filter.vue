@@ -4,7 +4,6 @@ import { getIconFillColor, getIconName } from '~/utils/icon-mapping'
 defineProps<{
   TagList: string[]
 }>()
-
 const activedTag = defineModel<string>()
 </script>
 <template>
@@ -40,10 +39,10 @@ const activedTag = defineModel<string>()
 }
 
 .post-tag {
-  @apply text-xs text-gray-600 transition-all duration-300;
+  @apply text-sm text-gray-600 transition-all duration-300;
   @apply rounded-full shadow-md px-[10px] py-[3px];
   @apply inline-block cursor-pointer;
-  @apply bg-opacity-50 bg-purple-50;
+  @apply bg-opacity-50 bg-purple-50 dark:text-gray-300 dark:bg-opacity-10;
   @apply flex items-center gap-2;
 }
 
@@ -54,6 +53,7 @@ const activedTag = defineModel<string>()
 }
 
 .selected {
-  @apply bg-purple-400 text-white;
+  @apply bg-violet-400 text-white;
+  @apply dark:bg-violet-500;
 }
 </style>

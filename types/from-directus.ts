@@ -27,12 +27,21 @@ export interface Book {
 export interface Project {
   id: number
   name: string
-  decription: string
-  content: string
+  description: string
   tech_stack: string
   status: string
+  url: string
 
   cover?: string
+  date_updated: string
+  date_created: string
+}
+
+export interface ITodo {
+  id: number
+  date: string
+  content: string
+
   date_updated: string
   date_created: string
 }

@@ -41,7 +41,7 @@ onMounted(async () => {
       </p>
     </header>
 
-    <div v-html="mdContent" class="prose mx-auto mt-16"></div>
+    <div v-html="mdContent" class="prose mx-auto mt-16 dark:prose-invert"></div>
   </div>
 </template>
 

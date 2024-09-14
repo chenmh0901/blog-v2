@@ -6,6 +6,16 @@ export default defineNuxtConfig({
     '@nuxtjs/tailwindcss',
     '@nuxt/image',
     '@nuxt/icon',
-    '@nuxtjs/color-mode'
+    '@nuxtjs/color-mode',
   ],
+  app: {
+    pageTransition: {
+      name: 'page',
+      mode: 'out-in',
+    },
+  },
+  css: ['@/assets/font/font.css'],
+  colorMode: {
+    classSuffix: '',
+  },
 })

@@ -1,0 +1,9 @@
+body {
+  @apply transition-all duration-300;
+  background-color: white;
+}
+
+.dark body {
+  @apply bg-black/95 duration-300 ;
+  color: white;
+}

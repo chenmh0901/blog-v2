@@ -42,7 +42,6 @@ const techIcons = {
   cs: 'mdi:laptop',
 
   // book
-
   '文学': 'ic:baseline-face',
   '科技': 'ic:baseline-fire-truck',
   '心理': 'ic:baseline-favorite',
@@ -54,14 +53,14 @@ const techIcons = {
 }
 
 const iconFillColor = {
-  algorithms: '#009900',
-  tool: '#990088',
-  other: '#bb0000',
-  course: '#00aaaa',
-  backend: '#bb3300',
-  game: '#009900',
-  lifelong: '#ff0000',
-  cs: '#333333',
+  algorithms: '#2E8B57',
+  frontend: '#C71585',
+  interview: '#990088',
+  cs: '	#9932CC',
+  lifelong: '#00008B',
+  other: '#33333',
+
+  // books
   '文学': '#009900',
   '科技': '#990088',
   '心理': '#bb0000',
@@ -72,12 +71,12 @@ const iconFillColor = {
 }
 
 const postTagColor = {
-  algorithms: '#009900',
-  frontend: '#009900',
+  algorithms: '#2E8B57',
+  frontend: '#C71585',
   interview: '#990088',
-  other: '#bb0000',
-  lifelong: '#775599',
-  cs: '#333333',
+  cs: '	#9932CC',
+  lifelong: '#00008B',
+  other: '#333333',
 }
 
 export const getIconName = (tech?: string) => {

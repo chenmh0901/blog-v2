@@ -7,6 +7,7 @@
     "dev": "nuxt dev",
     "generate": "nuxt generate",
     "preview": "nuxt preview",
+    "format": "prettier --write \"**/*.{js,vue,json}\"",
     "postinstall": "nuxt prepare"
   },
   "dependencies": {
@@ -20,7 +21,7 @@
   "devDependencies": {
     "@nuxt/icon": "^1.5.1",
     "@nuxt/image": "^1.8.0",
-    "@nuxtjs/color-mode": "^3.4.4",
+    "@nuxtjs/color-mode": "^3.5.1",
     "@nuxtjs/tailwindcss": "^6.12.1",
     "@tailwindcss/typography": "^0.5.13",
     "@types/markdown-it": "^14.1.2",

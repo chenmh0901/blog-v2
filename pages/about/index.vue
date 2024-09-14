@@ -7,7 +7,7 @@ definePageMeta({
 })
 </script>
 <template>
-  <div>
+  <div class="about">
     <Hero
       title="Projects"
       :descpition="`Here is amumu ，我从大学开始接触 code ，前端开发实习生，目前大四在读`"
@@ -19,4 +19,8 @@ definePageMeta({
   </div>
 </template>
 
-<style scoped lang="scss"></style>
+<style scoped lang="scss">
+.about {
+  @apply p-4 pb-48;
+}
+</style>
