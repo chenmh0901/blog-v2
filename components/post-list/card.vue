@@ -45,7 +45,7 @@ const imgLoading = ref(true)
     @apply flex justify-center items-center overflow-hidden;
     @apply h-[150px];
     @apply border-b rounded-t-lg dark:border-none;
-    @apply bg-gray-400;
+    @apply bg-gray-400 dark:brightness-[60%];
   }
 
   &_tag {
@@ -57,7 +57,7 @@ const imgLoading = ref(true)
 
   &_desc {
     @apply flex flex-col gap-1 flex-1;
-    @apply p-4 dark:bg-black/50 bg-white;
+    @apply p-4 dark:bg-black bg-white;
 
     h2 {
       @apply text-lg font-semibold;
