@@ -9,13 +9,13 @@ const toggleColorMode = () => {
 <template>
   <Icon
     v-if="colorMode.preference === 'dark'"
-    name="mdi:weather-night"
+    name="ic:outline-nights-stay"
     class="color-mode-icon"
     @click="toggleColorMode"
   />
   <Icon
     v-else
-    name="mdi:weather-sunny"
+    name="ic:outline-wb-sunny"
     class="color-mode-icon"
     @click="toggleColorMode"
   />
