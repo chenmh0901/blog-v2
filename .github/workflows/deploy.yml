@@ -52,7 +52,7 @@ jobs:
         uses: appleboy/ssh-action@master
         with:
           host: ${{ secrets.HOST }}
-          key: ${{ secrets.KEY }}
+          password: ${{ secrets.PASS }}
           username: ${{ secrets.USER }}
           script: |
             ls -la /home/ubuntu/niniix/.output/
