@@ -67,4 +67,5 @@ jobs:
           username: ${{ secrets.TG_USER }}
           password: ${{ secrets.TG_PASS }}
           script: |
+            ls -a /home/ubuntu/niniix/.output/
             /home/ubuntu/.local/share/pnpm/pm2 restart nuxtblog
