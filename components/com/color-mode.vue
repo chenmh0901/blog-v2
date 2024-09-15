@@ -7,7 +7,7 @@ const enableTransitions = () =>
   window.matchMedia('(prefers-reduced-motion: no-preference)').matches
 
 // 切换动画
-const toggleColorMode = async ({ clientX: x, clientY: y }: MouseEvent) => {
+async function toggleColorMode({ clientX: x, clientY: y }: MouseEvent) {
   const isDark = colorMode.value === 'dark'
   const setColorMode = () => {
     colorMode.preference = isDark ? 'light' : 'dark'
@@ -25,11 +25,12 @@ const toggleColorMode = async ({ clientX: x, clientY: y }: MouseEvent) => {
       Math.max(y, innerHeight - y),
     )}px at ${x}px ${y}px)`,
   ]
-
-  await document.startViewTransition(async () => {
-    setColorMode()
-    await nextTick()
-  }).ready
+  if (document.startViewTransition) {
+    await document.startViewTransition(async () => {
+      setColorMode()
+      await nextTick()
+    }).ready
+  }
 
   document.documentElement.animate(
     { clipPath: !isDark ? [...clipPath].reverse() : clipPath },
@@ -61,15 +62,5 @@ const toggleColorMode = async ({ clientX: x, clientY: y }: MouseEvent) => {
 .color-mode-icon {
   @apply cursor-pointer hover:scale-[120%] text-lg duration-300 transition-all;
   @apply hover:text-violet-500 dark:text-gray-300;
-}
-
-::view-transition-old(root),
-.dark::view-transition-new(root) {
-  z-index: 1;
-}
-
-::view-transition-new(root),
-.dark::view-transition-old(root) {
-  z-index: 9999;
 }
 </style>
