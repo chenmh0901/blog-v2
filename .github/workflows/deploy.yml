@@ -19,7 +19,7 @@ jobs:
         run: npm install -g pnpm
 
       - name: Build
-        run: pnpm install && pnpm build:prod
+        run: pnpm install && pnpm build
 
       - name: List local output directory
         run: ls -la .output/
