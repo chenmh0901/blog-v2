@@ -21,6 +21,9 @@ jobs:
       - name: Build
         run: pnpm install && pnpm build
 
+      - name: List local output directory
+        run: ls -la .output/
+
       - name: mkfile ecosystem.config.js
         run: |
           echo "module.exports = { 
@@ -31,6 +34,9 @@ jobs:
                   exec_mode: 'cluster', 
                 }]
               }" > .output/ecosystem.config.js
+
+      - name: List local output directory
+        run: ls -la .output/
 
       - name: Clear .output
         uses: appleboy/ssh-action@master
