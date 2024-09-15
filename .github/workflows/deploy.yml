@@ -39,21 +39,21 @@ jobs:
         run: ls -la .output/
 
       - name: Deploy
-        uses: easingthemes/ssh-deploy@v2.1.1
-        env:
-          SSH_PRIVATE_KEY: ${{ secrets.TG_KEY }}
-          ARGS: '-avzr --delete'
-          SOURCE: './.output/'
-          REMOTE_HOST: ${{ secrets.TG_HOST }}
-          REMOTE_USER: ${{ secrets.TG_USER }}
+        uses: easingthemes/ssh-deploy@v4.1.10
+        with:
+          SSH_PRIVATE_KEY: ${{ secrets.KEY }}
+          REMOTE_HOST: ${{ secrets.HOST }}
+          REMOTE_USER: ${{ secrets.USER }}
+          SOURCE: '/.output/'
+          SCRIPT_BEFORE: 'rm -rf /home/ubuntu/niniix/.output/*'
           TARGET: '/home/ubuntu/niniix/.output/'
 
       - name: Restart pm2
         uses: appleboy/ssh-action@master
         with:
-          host: ${{ secrets.TG_HOST }}
-          username: ${{ secrets.TG_USER }}
-          key: ${{ secrets.TG_KEY }}
+          host: ${{ secrets.HOST }}
+          username: ${{ secrets.USER }}
+          key: ${{ secrets.KEY }}
           script: |
             ls -a /home/ubuntu/niniix/.output/
             /home/ubuntu/.local/share/pnpm/pm2 restart nuxtblog
