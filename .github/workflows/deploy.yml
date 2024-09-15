@@ -43,7 +43,7 @@ jobs:
         with:
           host: ${{ secrets.TG_HOST }}
           username: ${{ secrets.TG_USER }}
-          password: ${{ secrets.TG_PASSWORD }}
+          password: ${{ secrets.TG_PASS }}
           script: |
             rm -rf /home/ubuntu/niniix/.output/*
 
@@ -55,7 +55,7 @@ jobs:
         with:
           host: ${{ secrets.TG_HOST }}
           user: ${{ secrets.TG_USER }}
-          pass: ${{ secrets.TG_PASSWORD }}
+          pass: ${{ secrets.TG_PASS }}
           connect_timeout: 10s
           local: '.output/*'
           remote: /home/ubuntu/niniix/.output/
@@ -65,6 +65,6 @@ jobs:
         with:
           host: ${{ secrets.TG_HOST }}
           username: ${{ secrets.TG_USER }}
-          password: ${{ secrets.TG_PASSWORD }}
+          password: ${{ secrets.TG_PASS }}
           script: |
             /home/ubuntu/.local/share/pnpm/pm2 restart nuxtblog
