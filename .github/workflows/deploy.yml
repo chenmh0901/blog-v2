@@ -52,8 +52,8 @@ jobs:
         uses: appleboy/ssh-action@master
         with:
           host: ${{ secrets.HOST }}
-          username: ${{ secrets.USER }}
           key: ${{ secrets.KEY }}
+          username: ${{ secrets.USER }}
           script: |
-            ls -a /home/ubuntu/niniix/.output/
+            ls -la /home/ubuntu/niniix/.output/
             /home/ubuntu/.local/share/pnpm/pm2 restart nuxtblog
