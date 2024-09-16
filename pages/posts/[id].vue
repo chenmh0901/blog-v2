@@ -55,14 +55,17 @@ onMounted(async () => {
 
     h1 {
       @apply text-4xl font-semibold self-center;
+      @apply dark:text-gray-300;
     }
 
     h2 {
       @apply text-lg text-gray-800 self-center;
+      @apply dark:text-gray-300;
     }
 
     .date {
       @apply text-gray-500 text-xs self-center;
+      @apply dark:text-gray-300;
     }
   }
 }
